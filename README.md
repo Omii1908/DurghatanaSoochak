@@ -1,6 +1,6 @@
 # Atindriyajñānam
 
-**Atindriyajñānam** ("Knowledge Beyond the Senses") is an advanced accident detection system designed to enhance road safety by utilizing smartphone sensors. The system gathers real-time data such as location, speed, and other critical parameters from the device, processes it with a Long Short-Term Memory (LSTM) model, and determines whether an accident has occurred. Additionally, it identifies if the area is accident-prone based on historical data and patterns.
+**Atindriyajñānam** (अतिन्द्रियज्ञानम्, "Knowledge Beyond the Senses") is an advanced accident detection system designed to enhance road safety by utilizing smartphone sensors. The system gathers real-time data such as location, speed, and other critical parameters from the device, processes it with a Long Short-Term Memory (LSTM) model, and determines whether an accident has occurred. Additionally, it identifies if the area is accident-prone based on historical data and patterns.
 
 ## Features
 

@@ -1,6 +1,6 @@
 # DurghatnaSoochak 
 
-**दुर्घटनासूचक** (DurghatanaSoochak) – "Accident indicator" is an advanced accident detection system designed to enhance road safety by utilizing smartphone sensors. The system gathers real-time data such as location, speed, and other critical parameters from the device, processes it with a Long Short-Term Memory (LSTM) model, and determines whether an accident has occurred. Additionally, it identifies if the area is accident-prone based on historical data and patterns.
+**दुर्घटनासूचक** (DurghatanaSoochak) – "Accident indicator" is an advanced accident detection system designed to enhance road safety by utilizing smartphone sensors. The system gathers real-time data such as location, speed, and other critical parameters from the device, processes it with a Gated Recurrent Unit(GRU) model, and determines whether an accident has occurred. Additionally, it identifies if the area is accident-prone based on historical data and patterns.
 
 ## Features
 
@@ -14,7 +14,7 @@
 
 ### Backend
 - **Python**: Core language for building the GRU model.
-- **TensorFlow/Keras**: Framework for developing and training the LSTM model.
+- **TensorFlow/Keras**: Framework for developing and training the GRU model.
 - **Flask** or **FastAPI**: To serve the model as an API (optional).
 
 ### Frontend

@@ -10,8 +10,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Accident" component={AccidentScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Accident Detection' }} />
+        <Stack.Screen name="Accident" component={AccidentScreen} options={{ title: 'Accident Detected!' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,8 +6,8 @@ export default function SensorVisualization({ sensorData }) {
 
   useFrame(() => {
     if (meshRef.current) {
-      meshRef.current.rotation.x = sensorData.x;
-      meshRef.current.rotation.y = sensorData.y;
+      meshRef.current.rotation.x = sensorData.y * 2; // Rotate based on accelerometer
+      meshRef.current.rotation.y = sensorData.x * 2;
     }
   });
 

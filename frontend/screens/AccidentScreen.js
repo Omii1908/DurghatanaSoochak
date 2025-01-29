@@ -11,16 +11,18 @@ export default function AccidentScreen({ route }) {
       initialRegion={{
         latitude: location.latitude,
         longitude: location.longitude,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitudeDelta: 0.005,
+        longitudeDelta: 0.005,
       }}
+      mapType="hybrid"
     >
       <Marker
         coordinate={{
           latitude: location.latitude,
           longitude: location.longitude,
         }}
-        title="Accident Location"
+        title="Accident Detected"
+        pinColor="red"
       />
     </MapView>
   );

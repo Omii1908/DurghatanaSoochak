@@ -1,106 +1,167 @@
-# DurghatnaSoochak 
+<h1 align="center">🚨 DurghatnaSoochak - दुर्घटनासूचक 🚨</h1>
 
-**दुर्घटनासूचक** (DurghatanaSoochak) – "Accident indicator" is an advanced accident detection system designed to enhance road safety by utilizing smartphone sensors. The system gathers real-time data such as location, speed, and other critical parameters from the device, processes it with a Gated Recurrent Unit(GRU) model, and determines whether an accident has occurred. Additionally, it identifies if the area is accident-prone based on historical data and patterns.
+<p align="center">
+  <em>"DurghatnaSoochak" (Accident Indicator) is an intelligent, AI-powered system that detects accidents in real-time using smartphone sensor data and identifies accident-prone areas using historical patterns — designed to enhance road safety.</em>
+</p>
 
-## Features
+<p align="center">
+  ⚙️ GRU-Based Deep Learning Model • 📱 React Native Frontend • 🌐 Cross-Platform • 🧠 AI-Driven Safety Alerts
+</p>
 
-- **Accident Detection**: Leverages GRU deep learning models to analyze sensor data for detecting accidents with high accuracy.
-- **Accident-Prone Area Detection**: Evaluates location data to determine whether the area is identified as high-risk based on historical data.
-- **Real-Time Data Collection**: Captures essential data such as GPS location, speed, and accelerometer readings from smartphone sensors.
-- **User-Friendly Interface**: A React Native-based interface for seamless interaction and real-time updates.
-- **Cross-Platform Compatibility**: Designed to work on both Android and iOS devices.
+---
 
-## Technology Stack
+## 🔍 Overview
 
-### Backend
-- **Python**: Core language for building the GRU model.
-- **TensorFlow/Keras**: Framework for developing and training the GRU model.
-- **Flask** or **FastAPI**: To serve the model as an API (optional).
+**दुर्घटनासूचक (DurghatnaSoochak)** leverages a deep learning model (GRU - Gated Recurrent Unit) and smartphone sensors (GPS, gyroscope, accelerometer) to detect accidents in real-time. It also assesses whether a user's location falls within a historically accident-prone zone.
 
-### Frontend
-- **React Native**: For the user interface, including data collection from device sensors.
+---
 
-### Data Sources
-- Smartphone sensors: GPS, accelerometer, gyroscope, etc.
+## 🚀 Features
 
-## Architecture
-1. **Data Collection**:
-   - The React Native app collects data from smartphone sensors in real time.
-2. **Data Transmission**:
-   - Sensor data is sent to the backend for processing.
-3. **Processing and Detection**:
-   - The Python-based GRU model analyzes the data to detect potential accidents and identifies accident-prone zones.
-4. **Notifications**:
-   - Alerts are sent to the user and emergency contacts when an accident is detected.
+- 🧠 **Accident Detection**  
+  Detects potential accidents using trained GRU deep learning models.
 
-## Setup Instructions
+- 📍 **Accident-Prone Area Detection**  
+  Analyzes geolocation data to determine if a location is high-risk.
 
-### Backend
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Omii1908/DurghatanaSoochak.git
-   cd DurghatnaSoochak/backend
-   ```
-2. Create a virtual environment and activate it:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Train the GRU model or use the pretrained model provided in the repository.
-5. Run the backend server:
-   ```bash
-   python app.py
-   ```
+- 📡 **Real-Time Sensor Monitoring**  
+  Continuously gathers and processes data from smartphone sensors.
 
-### Frontend
-1. Navigate to the React Native project directory:
-   ```bash
-   cd ../frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the React Native app:
-   ```bash
-   npm start
-   ```
-4. Test the app on an emulator or a physical device.
+- 📲 **Cross-Platform React Native App**  
+  Built using React Native and Expo for Android & iOS support.
 
-## Folder Structure
+- 📢 **Instant Alert Mechanism**  
+  Triggers alerts to the user (and optionally to emergency contacts).
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer       | Tools / Frameworks                     |
+|-------------|----------------------------------------|
+| **Backend** | Python, TensorFlow/Keras, Flask / FastAPI |
+| **Frontend**| React Native, Expo, JavaScript         |
+| **Model**   | GRU (Gated Recurrent Unit - RNN)       |
+| **Sensors** | GPS, Accelerometer, Gyroscope, etc.    |
+
+---
+
+## 🧠 System Architecture
+
+```mermaid
+graph TD;
+  A[React Native App] -->|Sensor Data| B[Backend API]
+  B --> C[GRU Model - Python/TensorFlow]
+  C --> D[Prediction Engine]
+  D --> E[Accident / Risk Detection]
+  E --> F[Alerts to User & Emergency Contact]
 ```
-Atindriyajnanam/
+
+---
+
+## 🧩 How It Works
+- 📱 **Data Collection**
+
+App collects GPS, speed, acceleration, and motion data continuously.
+
+- 🧠 **Model Analysis**
+
+GRU model trained on labeled accident data identifies potential crash patterns.
+
+- 📢 **Alert Mechanism**
+
+Upon detecting an anomaly, alerts are triggered for the user and optionally shared with emergency contacts.
+
+- 🗺️ **Zone Risk Assessment**
+
+The system evaluates geolocation to identify entry into a historically accident-prone zone.
+
+---
+
+## 📁 Folder Structure
+
+```Bash
+DurghatnaSoochak/
 ├── backend/
 │   ├── models/               # GRU model and training scripts
 │   ├── data/                 # Sample datasets
-│   ├── app.py                # Backend server script
+│   ├── app.py                # Flask/FastAPI server
 │   └── requirements.txt      # Python dependencies
 ├── frontend/
-│   ├── src/                  # React Native source files
-│   ├── App.js                # Entry point of the app
+│   ├── src/                  # React Native source code
+│   ├── App.js                # App entry point
 │   ├── package.json          # Node.js dependencies
-│   └── assets/               # Static assets
+│   └── assets/               # Icons and media
 └── README.md                 # Project documentation
 ```
 
-## How It Works
-1. **Data Input**:
-   - The app continuously gathers location and sensor data in the background.
-2. **Model Analysis**:
-   - The backend GRU model processes the data to detect anomalies indicating potential accidents.
-3. **Output**:
-   - Accident alerts and location risk assessments are displayed on the app interface.
+---
 
-## Contributions
-Contributions are welcome! Please submit a pull request or raise an issue to report bugs or suggest features.
+## ⚙️ Setup Instructions
 
-## Acknowledgments
-- Inspired by advancements in AI and sensor technology for road safety.
-- Built with the support of open-source tools and libraries.
+- 🧠 **Backend (Python + GRU Model)**
 
-## Contact
-For any inquiries, reach out to **Om Prakash Kumar** at [Omil844198@gmail.com](mailto:Omil844198@gmail.com).
+```bash
+# Clone repo
+git clone https://github.com/Omii1908/DurghatnaSoochak.git
+cd DurghatnaSoochak/backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run backend server
+python app.py
+```
+You can also train the GRU model yourself or use the pretrained model provided.
+
+- 📲 **Frontend (React Native + Expo)**
+
+```bash
+cd ../frontend
+
+# Install dependencies
+npm install
+
+# Start the app
+npm start
+```
+Test using Android/iOS emulator or the Expo Go app on your mobile device.
+
+---
+
+## 📉 Future Enhancements
+- 🔗 SMS/Call notifications to emergency contacts
+- 📊 Cloud-based accident analytics dashboard
+- 📁 Integration with government traffic APIs
+- 🔐 User login with profile-based risk prediction
+- 🗂️ Sync crash history and GPS data to a secure server
+
+---
+
+## 🌐 Dataset Sources
+- 📊 Accident Prone Zone Training: MoRTH 2022 & 2023 data
+- 📱 Sensor Training Data: Simulated + real-world accelerometer/GPS data
+- 🧪 GRU model trained with labeled accident and non-accident events
+
+---
+
+## 👨‍💻 Contributions
+- Want to help improve this project? Open issues, suggest features, or fork and submit PRs.
+
+- All contributions are welcome, especially in:
+  - Model training improvement
+  -  UI enhancement
+  -  Backend optimization
+
+## 🙏 Acknowledgments
+- MoRTH for public accident datasets
+- TensorFlow, React Native, and Expo for development tools
+- Open-source communities for libraries and inspiration
+
+---
+
+<p align="center"> <strong>“स्वस्थं यातायातं, सुरक्षितं जीवनम्”</strong><br> <em>“Safe Traffic, Secure Life” – Let AI Drive Road Safety.</em> </p>
